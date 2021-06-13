@@ -14,8 +14,18 @@ def main():
 
 
     temp_iter = zip(byte_input1, byte_input2)
+    out_string = ''
     for x, y in temp_iter:
         print(x, y)
+        print(x ^ y)
+        print([x ^ y])
+        print(type(x ^ y))
+        print(type([x ^ y]))
+        print(bytes([x ^ y]))
+        print(bytes([x ^ y]).hex())
+
+        out_string = out_string + bytes([x ^ y]).hex()
+    print(out_string)
 
 
 if __name__=="__main__":
